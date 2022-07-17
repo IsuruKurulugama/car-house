@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Add Car</h1>
+<div mat-dialog-content>
+    
+  <mat-form-field class="filed-style">
+    <input matInput type="text" [(ngModel)]="data.Brand" placeholder="Brand">
+  </mat-form-field> <br /> <br />
+
+  <mat-form-field class="filed-style">
+    <input matInput type="text" [(ngModel)]="data.Model" placeholder="Model">
+  </mat-form-field><br /> <br />
+
+  <section class="example-section">
+    <mat-checkbox class="example-margin" [(ngModel)]="data.Navigation">Navigation</mat-checkbox>
+  </section>
+  <br /> <br />
+
+</div>
+<div mat-dialog-actions class="right">
+  <button type="submit" mat-button mat-flat-button color="primary" [mat-dialog-close]="data"
+    cdkFocusInitial>Create</button>
+
+  <button mat-raised-button (click)="onNoClick()">Cancel</button>
+</div>

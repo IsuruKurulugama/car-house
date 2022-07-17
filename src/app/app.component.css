@@ -1,0 +1,17 @@
+
+.nav-span{
+    color: #fff;
+    margin-left: 20px;
+}
+ .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+  
+  }
+
+  @media screen and (max-width: 575px) {
+    
+  }

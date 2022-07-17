@@ -1,0 +1,35 @@
+<div class="data-container">
+  <button mat-button mat-flat-button color="primary" class="add-button" (click)="openAddCarDialog()">Add Car</button>
+</div><br/>
+
+<div class="mat-elevation-z8 data-container">
+
+  <table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="Id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.Id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Brand">
+      <th mat-header-cell *matHeaderCellDef> Brand </th>
+      <td mat-cell *matCellDef="let element"> {{element.Brand}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Model">
+      <th mat-header-cell *matHeaderCellDef> Model </th>
+      <td mat-cell *matCellDef="let element"> {{element.Model}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Navigation">
+      <th mat-header-cell *matHeaderCellDef> Navigation </th>
+      <td mat-cell *matCellDef="let element"> {{element.Navigation}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
